@@ -1,25 +1,18 @@
-function is_username_valid(user){
-	var userReg = /^[a-z]{5,}$/;
-	var userValid = user.match(userReg);
-
-	if (userValid == null) {
-		return false
-	} else {
-		return true
-	}
+function username(uname){
+    if(uname.length !== 7) return false;
+    for(var i=0 ; i<uname.length ; i++){
+        if(uname[i].charCodeAt(0) < 65 || uname[i].charCodeAt(0) > 90) return false;
+    }
+    return true;
 }
-var user = "arkademy"
-console.log(is_username_valid(user));
 
-
-function is_password_valid(pass) {
-	var passReg = /^[0-9]{2}[&|@][A-Z]{4}$/;
-	var passValid = pass.match(passReg);
-	if(passValid == null) {
-		return false
-	} else {
-		return true
-	}
+function password(pass){
+    if(pass.length !== 7) return false;
+    if((pass[0] !== pass[1] && pass[0]!== pass[2] || pass[3] !== '*' || (pass[4] !== pass[5] && pass[4] !== pass[6]))) return false;
+    return true;
 }
-var pass = "29@PASS"
-console.log(is_password_valid(pass));
+
+username("ARKDEMY");
+username("GALIH");
+password("111*sss");
+password("1234*try");
