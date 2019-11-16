@@ -1,6 +1,6 @@
 function biodata (name, age) {
 	var address = "Jl. kenanga Desa gapura Suci Kec. Pelepat Kab. Bungo Prov. Jambi";
-	var hobbies = ["Dance", "Music", "Badminton"];
+	var hobbies = ["Dance", "Music", "Badminton", ];
 	var is_married = false;
 	var list_school = [
 					{name: 'SMA NEGERI 1 PELEPAT ILIR', year_in: 2010, year_out: 2013, major: "IPA"},
